@@ -1,0 +1,13 @@
+// INFORMACIÓN DENTRO DE CONTROLLER
+import { Request, Response } from "express";
+
+export const getAll = (req: Request, res: Response): void => {
+    console.log("Se llamó a getAll"); 
+    res.status(200).json({ 
+        productos: [
+            { id: 1, nombre: "Juan Perez", email: "juan@example.com" },
+            { id: 2, nombre: "Ana Garcia", email: "ana@example.com" },
+            { id: 3, nombre: "Carlos Lopez", email: "Carlos@example.com" }
+        ]
+    });
+};
